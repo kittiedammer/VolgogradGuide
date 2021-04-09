@@ -1,0 +1,7 @@
+{
+  "name": "VolgogradGuide",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
