@@ -1,0 +1,57 @@
+<ion-toolbar>
+  <ion-title>Категории</ion-title>
+  <ion-buttons fill="outline" slot="end">
+    <ion-button (click)="dismiss()">
+      <ion-icon name="close-outline"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+<ion-content>
+  <div class="content__container">
+    <ion-content>
+      <ion-item>
+        <ion-label>Выбрать всё</ion-label>
+        <ion-checkbox (click)="chooseAllAction(choseAll)" [(ngModel)]="choseAll"></ion-checkbox>
+      </ion-item>
+      <div class="category__container">
+        <div (click)="selectItem('restaurant')" [class.active]="locationsType.get('restaurant')" class="category__item">
+          <div class="category__item__icon">
+            <ion-icon name="restaurant-outline"></ion-icon>
+          </div>
+          <span>Рестораны</span>
+        </div>
+        <div (click)="selectItem('cafe')" [class.active]="locationsType.get('cafe')" class="category__item">
+          <div class="category__item__icon">
+            <ion-icon name="cafe-outline"></ion-icon>
+          </div>
+          <span>Кафе</span>
+        </div>
+        <div (click)="selectItem('parking')" [class.active]="locationsType.get('parking')" class="category__item">
+          <div class="category__item__icon">
+            <ion-icon name="car-outline"></ion-icon>
+          </div>
+          <span>Парковка</span>
+        </div>
+        <div (click)="selectItem('parks')" [class.active]="locationsType.get('parks')" class="category__item">
+          <div class="category__item__icon">
+            <ion-icon name="leaf-outline"></ion-icon>
+          </div>
+          <span>Парки</span>
+        </div>
+        <div (click)="selectItem('attraction')" [class.active]="locationsType.get('attraction')" class="category__item">
+          <div class="category__item__icon">
+            <ion-icon name="diamond-outline"></ion-icon>
+          </div>
+          <span>Знаковые места</span>
+        </div>
+        <div (click)="selectItem('shop')" [class.active]="locationsType.get('shop')" class="category__item">
+          <div class="category__item__icon">
+            <ion-icon name="basket-outline"></ion-icon>
+          </div>
+          <span>Торговые Центры</span>
+        </div>
+      </div>
+    </ion-content>
+    <ion-button (click)="updateMapMarkers()" expand="full">Применить</ion-button>
+  </div>
+</ion-content>

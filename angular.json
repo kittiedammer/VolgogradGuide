@@ -31,8 +31,14 @@
                 "output": "./svg"
               }
             ],
-            "styles": ["src/theme/variables.scss", "src/global.scss"],
-            "scripts": []
+            "styles": [
+              "src/theme/variables.scss", "src/global.scss",
+              "./node_modules/video.js/dist/video-js.css",
+              "./node_modules/videojs-vr/dist/videojs-vr.css"],
+            "scripts": [
+              "./node_modules/video.js/dist/video.js",
+              "./node_modules/videojs-vr/dist/videojs-vr.js"
+            ]
           },
           "configurations": {
             "production": {
